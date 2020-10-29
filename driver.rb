@@ -1,11 +1,17 @@
 load 'utils.rb'
 
 result = ''
-10.times do
-  7.times do
-    result << "#{numConsonantGen(13)}\n"
+
+blocks = 2
+quantity = 10
+
+counter = 0
+blocks.times do
+  quantity.times do
+    result << "#{numConsonantGen(16)}\n"
   end
-  result << "\n"
+  counter += 1
+  result << "\n" unless counter == blocks
 end
 
 num_file = File.new("nums.txt", "w+")
