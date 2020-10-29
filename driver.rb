@@ -1,7 +1,5 @@
 load 'utils.rb'
 
-load 'utils.rb'
-
 result = ''
 20.times do
   result << numConsonantGen 12
