@@ -1,8 +1,10 @@
 load 'utils.rb'
 
 result = ''
-20.times do
-  result << numConsonantGen(12)
+10.times do
+  7.times do
+    result << "#{numConsonantGen(13)}\n"
+  end
 end
 
 num_file = File.new("nums.txt", "w+")
