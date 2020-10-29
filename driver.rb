@@ -5,6 +5,7 @@ result = ''
   7.times do
     result << "#{numConsonantGen(13)}\n"
   end
+  result << "\n"
 end
 
 num_file = File.new("nums.txt", "w+")
