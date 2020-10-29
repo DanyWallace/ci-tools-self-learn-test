@@ -1,6 +1,10 @@
 name: Rails Unit Tests
 
-on: [push, pull_request]
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0,15,30,45 * * * *'
 
 jobs:
   build:
@@ -17,3 +21,9 @@ jobs:
       run: |
         gem install bundler
         ruby driver.rb
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -m "Latest data: ${timestamp}" || exit 0
+        git push
