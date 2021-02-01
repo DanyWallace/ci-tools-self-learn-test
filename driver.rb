@@ -2,8 +2,8 @@ load 'utils.rb'
 
 result = ''
 
-blocks = 2
-quantity = 10
+blocks = 10
+quantity = 20
 
 counter = 0
 blocks.times do
